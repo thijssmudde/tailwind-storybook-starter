@@ -1,0 +1,76 @@
+{
+  "name": "tappui",
+  "author": "Fullhdpixel",
+  "version": "0.1.1",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=12.13"
+  },
+  "module": "dist/tappui.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/tappui.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/tappui.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "NODE_ENV=production tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "build:css": "postcss ./src/styles/tailwind.css build -o css/tailwind.dist.css --minify"
+  },
+  "peerDependencies": {
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.12.13",
+    "@headlessui/react": "1.4.1",
+    "@fontsource/inter": "4.5.0",
+    "@size-limit/preset-small-lib": "4.9.2",
+    "@storybook/addon-a11y": "6.3.12",
+    "@storybook/addon-essentials": "6.3.12",
+    "@storybook/addon-info": "5.3.21",
+    "@storybook/addon-links": "6.3.12",
+    "@storybook/addons": "6.3.12",
+    "@storybook/react": "6.3.12",
+    "@tailwindcss/forms": "0.3.4",
+    "@tailwindcss/postcss7-compat": "2.0.3",
+    "@testing-library/jest-dom": "5.11.9",
+    "@testing-library/react": "11.2.5",
+    "@testing-library/react-hooks": "7.0.2",
+    "@types/react": "17.0.1",
+    "@types/react-dom": "17.0.0",
+    "autoprefixer": "9",
+    "babel-jest": "27.3.1",
+    "babel-loader": "8.2.2",
+    "classnames": "2.3.1",
+    "postcss": "7",
+    "prettier": "2.4.1",
+    "react-headless-pagination": "0.1.0",
+    "react-icons": "4.3.1",
+    "react-is": "17.0.1",
+    "size-limit": "4.9.2",
+    "storybook-addon-designs": "6.2.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "tailwindcss-breakpoints-inscpector": "1.0.0",
+    "tsdx": "0.14.1",
+    "typescript": "4.1.3"
+  }
+}
