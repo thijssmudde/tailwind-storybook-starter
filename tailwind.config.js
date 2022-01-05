@@ -116,6 +116,6 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/forms"),
-    require("tailwindcss-breakpoints-inscpector"),
+    require("tailwindcss-breakpoints-inspector"),
   ],
 };
